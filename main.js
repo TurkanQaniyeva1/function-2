@@ -27,8 +27,15 @@ let obj = [
     }
 ]
 
-let driver = obj.filter(person => person.driving && person.age >= 18);
+let driver = obj.filter(function(person) {
+    return person.driving && person.age >= 18;
+});
+
 console.log(driver);
 
-let driver2 = obj.filter(person => person.surname === "Aliyev" && person.age < 18);
-console.log(driver2);
+let driver2 = obj.filter(function(person) {
+    return person.surname === "Aliyev" && person.age < 18;
+});
+
+
+ console.log(driver2);
